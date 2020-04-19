@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  vault:
+    image: vault:1.4.0
+    command:
+    - server
+    ports:
+    - 8200:8200
+    cap_add:
+    - IPC_LOCK
+    volumes: 
+    - ./data:/vault/file
+    - ./config:/vault/config
+    labels:
+      container_group: kms
+    restart: unless-stopped
+  unseal:
+    build:
+      context: unseal
+    volumes:
+    - ./secrets:/secrets
