@@ -14,4 +14,4 @@ After the above command, you will get the `secrets.yaml` in the `secrets` direct
 * root token
 * unseal threshold
 
-*** IMPORTANT *** : you MUST NOT contain `secrets.yaml` and the contents in the git repository!!
+***IMPORTANT*** : you MUST NOT contain `secrets.yaml` and the contents in the git repository!!
